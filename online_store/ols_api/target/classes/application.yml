@@ -1,0 +1,20 @@
+server:
+  port: 8088
+  tomcat:
+    uri-encoding: UTF-8
+  max-http-header-size: 80KB
+
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/online_store?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
+    username: root
+    password: Aa941211
+    type: com.zaxxer.hikari.HikariDataSource
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+#    database: mysql
+#    properties:
+#      hibernate.dialect=org.hibernate.dialect.MySQL57Dialect

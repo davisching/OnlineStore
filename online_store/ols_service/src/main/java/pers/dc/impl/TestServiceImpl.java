@@ -24,17 +24,18 @@ public class TestServiceImpl implements TestService {
     }
 
     @Override
+    @Transactional
     public void addStu(Stu stu) {
-
+        stuDao.save(stu);
     }
 
     @Override
     public void updateStu(Stu stu) {
-
+        stuDao.save(stu);
     }
 
     @Override
     public void deleteStu(Long id) {
-
+        stuDao.deleteById(id);
     }
 }

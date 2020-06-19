@@ -1,10 +1,7 @@
 package pers.dc.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import pers.dc.TestService;
 import pers.dc.bean.Stu;
 
@@ -25,6 +22,21 @@ public class HelloController {
     @GetMapping("/stu/{id}")
     public Stu getStuInfoById(@PathVariable("id") Long id) {
         return testService.getStuInfoById(id);
+    }
+
+    @PostMapping("/stu")
+    public void addStu(@RequestBody Stu stu) {
+        testService.addStu(stu);
+    }
+
+    @PutMapping("/stu")
+    public void updateStu(@RequestBody Stu stu) {
+        testService.updateStu(stu);
+    }
+
+    @DeleteMapping("/stu")
+    public void deleteStu(Long id) {
+        testService.deleteStu(id);
     }
 
 }

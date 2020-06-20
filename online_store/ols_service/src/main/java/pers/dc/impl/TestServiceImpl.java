@@ -1,6 +1,5 @@
 package pers.dc.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -30,11 +29,13 @@ public class TestServiceImpl implements TestService {
     }
 
     @Override
+    @Transactional
     public void updateStu(Stu stu) {
         stuDao.save(stu);
     }
 
     @Override
+    @Transactional
     public void deleteStu(Long id) {
         stuDao.deleteById(id);
     }

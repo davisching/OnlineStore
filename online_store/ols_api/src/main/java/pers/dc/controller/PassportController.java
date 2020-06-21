@@ -3,13 +3,18 @@ package pers.dc.controller;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import pers.dc.bean.Users;
 import pers.dc.bean.bo.UserCreationBO;
+import pers.dc.bean.bo.UserLoginBO;
+import pers.dc.bean.vo.UserVO;
+import pers.dc.util.CookieUtils;
 import pers.dc.util.JsonResult;
 import pers.dc.service.UserService;
+import pers.dc.util.JsonUtils;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 @RestController
@@ -36,11 +41,27 @@ public class PassportController {
 
     @PostMapping("/register")
     @ApiOperation(value = "「用戶註冊」接口", notes = "進行用戶註冊（判斷輸入長度是否合適，密碼是否一致，用戶名是否存在）")
-    public JsonResult register(@RequestBody @Valid UserCreationBO userCreationBO) {
+    public JsonResult register(@RequestBody @Valid UserCreationBO userCreationBO,
+                               HttpServletRequest request, HttpServletResponse response) {
         if (userService.usernameExisted(userCreationBO.getUsername()))
             return JsonResult.errorMsg("用戶名已經存在！");
         Users user = userService.createUser(userCreationBO);
+
+        CookieUtils.setCookie(request, response, "user",
+                JsonUtils.objectToJson(new UserVO(user)), true);
+
         return JsonResult.ok(user);
     }
 
+    @PostMapping("/login")
+    @ApiOperation(value = "「用戶登陸」接口", notes = "進行用戶登陸（判斷輸入是否為空）")
+    public JsonResult login(@RequestBody @Valid UserLoginBO userLoginBO,
+                            HttpServletRequest request, HttpServletResponse response) {
+        Users user = userService.userLogin(userLoginBO);
+
+        CookieUtils.setCookie(request, response, "user",
+                JsonUtils.objectToJson(new UserVO(user)), true);
+
+        return JsonResult.ok(user);
+    }
 }

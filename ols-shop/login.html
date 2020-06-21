@@ -112,11 +112,11 @@
 						return;
 					}
 
-					var userBO = {
+					var userCreationBO = {
 						username: this.username,
 						password: this.password
 					};
-					// console.log(userBO);
+					// console.log(userCreationBO);
 
 					var serverUrl = app.serverUrl;
 
@@ -124,7 +124,7 @@
 					// form提交
 					axios.defaults.withCredentials = true;
 					// console.log(axios.defaults);
-					axios.post(serverUrl + '/passport/login', userBO)
+					axios.post(serverUrl + '/passport/login', userCreationBO)
 						.then(res => {
 							if (res.data.status == 200) {
 								var user = res.data;

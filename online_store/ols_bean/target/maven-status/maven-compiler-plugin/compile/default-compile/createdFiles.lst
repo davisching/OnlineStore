@@ -1,5 +1,6 @@
 pers/dc/bean/ItemsSpec.class
 pers/dc/bean/ItemsImg.class
+pers/dc/bean/bo/UserLoginBO.class
 pers/dc/bean/ItemsComments.class
 pers/dc/bean/bo/UserCreationBO.class
 pers/dc/bean/Carousel.class

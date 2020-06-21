@@ -1,4 +1,5 @@
 pers/dc/util/JsonResult.class
+pers/dc/config/CorsConfig.class
 pers/dc/util/DateUtil.class
 pers/dc/util/Encryptors.class
 pers/dc/validation/FieldMatchValidator.class

@@ -4,10 +4,11 @@ package pers.dc.service.impl;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+import pers.dc.bean.bo.UserCreationBO;
+import pers.dc.bean.bo.UserLoginBO;
 import pers.dc.enums.Gender;
 import pers.dc.util.Encryptors;
 import pers.dc.bean.Users;
-import pers.dc.bean.bo.UserCreationBO;
 import pers.dc.dao.UserDao;
 import pers.dc.service.UserService;
 
@@ -38,12 +39,7 @@ public class UserServiceImpl implements UserService {
         Users user = new Users();
         user.setId(UUID.randomUUID().toString());
         user.setUsername(userCreationBO.getUsername());
-        try {
-            user.setPassword(Encryptors.getMD5Str(userCreationBO.getPassword()));
-        } catch (Exception e) {
-            e.printStackTrace();
-            System.out.println("密碼加密失敗！");
-        }
+        user.setPassword(Encryptors.getMD5Str(userCreationBO.getPassword()));
         user.setNickname(user.getUsername());
         user.setFace(USER_FACE);
         user.setBirthday(new Date());
@@ -54,5 +50,11 @@ public class UserServiceImpl implements UserService {
         userDao.save(user);
 
         return user;
+    }
+
+    @Override
+    public Users userLogin(UserLoginBO userLoginBO) {
+            String password = Encryptors.getMD5Str(userLoginBO.getPassword());
+            return userDao.findByUsernameAndPassword(userLoginBO.getUsername(), password);
     }
 }

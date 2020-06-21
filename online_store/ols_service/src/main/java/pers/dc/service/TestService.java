@@ -1,4 +1,4 @@
-package pers.dc;
+package pers.dc.service;
 
 import pers.dc.bean.Stu;
 

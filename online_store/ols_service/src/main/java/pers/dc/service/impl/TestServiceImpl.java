@@ -1,10 +1,10 @@
-package pers.dc.impl;
+package pers.dc.service.impl;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-import pers.dc.StuDao;
-import pers.dc.TestService;
+import pers.dc.dao.StuDao;
+import pers.dc.service.TestService;
 import pers.dc.bean.Stu;
 
 @Service

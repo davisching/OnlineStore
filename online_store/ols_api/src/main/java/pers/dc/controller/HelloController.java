@@ -1,8 +1,7 @@
 package pers.dc.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import pers.dc.TestService;
+import pers.dc.service.TestService;
 import pers.dc.bean.Stu;
 
 @RestController

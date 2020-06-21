@@ -1,2 +1,3 @@
 pers/dc/App.class
+pers/dc/controller/PassportController.class
 pers/dc/controller/HelloController.class

@@ -3,7 +3,9 @@ package pers.dc.controller;
 import org.springframework.web.bind.annotation.*;
 import pers.dc.service.TestService;
 import pers.dc.bean.Stu;
+import springfox.documentation.annotations.ApiIgnore;
 
+@ApiIgnore
 @RestController
 public class HelloController {
 

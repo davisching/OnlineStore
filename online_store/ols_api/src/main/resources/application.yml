@@ -12,10 +12,13 @@ spring:
     password: Aa941211
     type: com.zaxxer.hikari.HikariDataSource
   jpa:
-    show-sql: false
+    show-sql: true
     hibernate:
       ddl-auto: update
+#    properties:
+#      hibernate:
+#        format_sql: true
 
-  jackson:
-    serialization:
-      fail-on-empty-beans: false
+jackson:
+  serialization:
+    fail-on-empty-beans: false

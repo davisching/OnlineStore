@@ -64,4 +64,16 @@ public class PassportController {
 
         return JsonResult.ok(user);
     }
+
+    @PostMapping("/logout")
+    @ApiOperation(value = "「用戶登出」接口", notes = "進行用戶登出")
+    public JsonResult logout(@RequestParam String userId,
+                             HttpServletRequest request, HttpServletResponse response) {
+        CookieUtils.deleteCookie(request, response, "user");
+
+        // TODO 用戶退出，要清空購物車
+        // TODO 分布式會話中，清除用戶數據
+
+        return JsonResult.ok();
+    }
 }

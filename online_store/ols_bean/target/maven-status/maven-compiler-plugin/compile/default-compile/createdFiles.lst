@@ -9,6 +9,8 @@ pers/dc/bean/Users.class
 pers/dc/bean/OrderItems.class
 pers/dc/bean/vo/UserVO.class
 pers/dc/bean/ItemsParam.class
+pers/dc/bean/vo/SubCat.class
+pers/dc/bean/vo/IndexSubCatVO.class
 pers/dc/bean/Orders.class
 pers/dc/bean/UserAddress.class
 pers/dc/bean/OrderStatus.class

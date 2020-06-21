@@ -7,6 +7,8 @@
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/vo/UserVO.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/UserAddress.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/OrderItems.java
+/Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/vo/IndexSubCatVO.java
+/Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/vo/SubCat.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/Category.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/bo/UserCreationBO.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/Orders.java

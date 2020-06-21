@@ -1,8 +1,13 @@
 package pers.dc.bean;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.util.Date;
 
+@Entity
 public class Carousel {
 
+  @Id
   private String id;
   private String imageUrl;
   private String backgroundColor;
@@ -11,8 +16,8 @@ public class Carousel {
   private long type;
   private long sort;
   private long isShow;
-  private java.sql.Timestamp createTime;
-  private java.sql.Timestamp updateTime;
+  private Date createTime;
+  private Date updateTime;
 
 
   public String getId() {
@@ -86,20 +91,20 @@ public class Carousel {
   }
 
 
-  public java.sql.Timestamp getCreateTime() {
+  public Date getCreateTime() {
     return createTime;
   }
 
-  public void setCreateTime(java.sql.Timestamp createTime) {
+  public void setCreateTime(Date createTime) {
     this.createTime = createTime;
   }
 
 
-  public java.sql.Timestamp getUpdateTime() {
+  public Date getUpdateTime() {
     return updateTime;
   }
 
-  public void setUpdateTime(java.sql.Timestamp updateTime) {
+  public void setUpdateTime(Date updateTime) {
     this.updateTime = updateTime;
   }
 

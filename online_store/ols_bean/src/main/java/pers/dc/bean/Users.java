@@ -2,6 +2,7 @@ package pers.dc.bean;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.util.Date;
 
 @Entity(name = "users")
 public class Users {
@@ -16,9 +17,9 @@ public class Users {
   private String mobile;
   private String email;
   private long sex;
-  private java.sql.Date birthday;
-  private java.sql.Timestamp createdTime;
-  private java.sql.Timestamp updatedTime;
+  private Date birthday;
+  private Date createdTime;
+  private Date updatedTime;
 
   public String getId() {
     return id;
@@ -101,29 +102,29 @@ public class Users {
   }
 
 
-  public java.sql.Date getBirthday() {
+  public Date getBirthday() {
     return birthday;
   }
 
-  public void setBirthday(java.sql.Date birthday) {
+  public void setBirthday(Date birthday) {
     this.birthday = birthday;
   }
 
 
-  public java.sql.Timestamp getCreatedTime() {
+  public Date getCreatedTime() {
     return createdTime;
   }
 
-  public void setCreatedTime(java.sql.Timestamp createdTime) {
+  public void setCreatedTime(Date createdTime) {
     this.createdTime = createdTime;
   }
 
 
-  public java.sql.Timestamp getUpdatedTime() {
+  public Date getUpdatedTime() {
     return updatedTime;
   }
 
-  public void setUpdatedTime(java.sql.Timestamp updatedTime) {
+  public void setUpdatedTime(Date updatedTime) {
     this.updatedTime = updatedTime;
   }
 

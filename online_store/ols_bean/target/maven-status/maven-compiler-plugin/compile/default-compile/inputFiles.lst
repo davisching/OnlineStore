@@ -1,3 +1,4 @@
+/Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/vo/CommentCountsVO.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/vo/SixItemVO.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/ItemsParam.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/ItemsImg.java
@@ -13,6 +14,7 @@
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/vo/ItemInfoVO.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/vo/SixItem.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/Items.java
+/Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/vo/CommentRecordVO.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/Category.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/bo/UserCreationBO.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/Orders.java

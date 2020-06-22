@@ -1,5 +1,6 @@
 pers/dc/dao/ItemImgDao.class
 pers/dc/dao/ItemSpecDao.class
+pers/dc/dao/ItemCommentDao.class
 pers/dc/dao/CarouselDao.class
 pers/dc/dao/StuDao.class
 pers/dc/dao/ItemParamDao.class

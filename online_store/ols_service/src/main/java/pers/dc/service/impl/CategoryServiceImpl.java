@@ -31,10 +31,10 @@ public class CategoryServiceImpl implements CategoryService {
     public List<IndexSubCatVO> getSubCatsWithFatherId(Long id) {
         List<IndexSubCatVO> res = new ArrayList<>();
         for (Category c : categoryDao.findAllByFatherId(id)) {
-            IndexSubCatVO indexSubCatVO = new IndexSubCatVO();
-            indexSubCatVO.setName(c.getName());
-            indexSubCatVO.setSubCatList(categoryDao.findAllByFatherIdIntoSubCat(c.getId()));
-            res.add(indexSubCatVO);
+            IndexSubCatVO subCatVO = new IndexSubCatVO();
+            subCatVO.setName(c.getName());
+            subCatVO.setSubCatList(categoryDao.findSubCatByFatherId(c.getId()));
+            res.add(subCatVO);
         }
         return res;
     }

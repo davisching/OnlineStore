@@ -1,17 +1,13 @@
 package pers.dc.bean.vo;
 
-import pers.dc.bean.Category;
-
-import javax.persistence.*;
 import java.util.List;
-
 
 public class IndexSubCatVO {
 
     private long id;
     private String name;
 
-    private List<SubCat> subCatList;
+    private List<IndexSubCat> subCatList;
 
     public String getName() {
         return name;
@@ -21,19 +17,11 @@ public class IndexSubCatVO {
         this.name = name;
     }
 
-    public List<SubCat> getSubCatList() {
+    public List<IndexSubCat> getSubCatList() {
         return subCatList;
     }
 
-    public void setSubCatList(List<SubCat> subCatList) {
+    public void setSubCatList(List<IndexSubCat> subCatList) {
         this.subCatList = subCatList;
-    }
-
-    @Override
-    public String toString() {
-        return "IndexSubCatVO{" +
-                "name='" + name + '\'' +
-                ", subCatList=" + subCatList +
-                '}';
     }
 }

@@ -7,11 +7,14 @@ pers/dc/bean/Carousel.class
 pers/dc/bean/Category.class
 pers/dc/bean/Users.class
 pers/dc/bean/OrderItems.class
+pers/dc/bean/vo/SixItemVO.class
+pers/dc/bean/Items.class
 pers/dc/bean/vo/UserVO.class
 pers/dc/bean/ItemsParam.class
 pers/dc/bean/vo/IndexSubCatVO.class
 pers/dc/bean/vo/IndexSubCat.class
 pers/dc/bean/Orders.class
+pers/dc/bean/vo/SixItem.class
 pers/dc/bean/UserAddress.class
 pers/dc/bean/OrderStatus.class
 pers/dc/bean/Stu.class

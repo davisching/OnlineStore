@@ -9,6 +9,8 @@ import pers.dc.bean.vo.IndexSubCat;
 import java.util.List;
 
 public interface CategoryDao extends JpaRepository<Category, Long> {
+    Category findOneById(long id);
+
     List<Category> findAllByType(long type);
 
     List<Category> findAllByFatherId(long fatherId);

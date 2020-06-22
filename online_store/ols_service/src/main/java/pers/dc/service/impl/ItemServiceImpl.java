@@ -101,4 +101,17 @@ public class ItemServiceImpl implements ItemService {
         return pages;
     }
 
+    @Override
+    public Page<SearchResultVO> getSearchResult(String keywords, String sort, int page, int pageSize) {
+        page -= 1;
+        Page<SearchResultVO> pages;
+        if (sort != null && sort.equals("c"))
+            pages = itemDao.findSearchResultSortBySellCounts(keywords, PageRequest.of(page, pageSize));
+        else if (sort != null && sort.equals("p"))
+            pages = itemDao.findSearchResultSortByPrice(keywords, PageRequest.of(page, pageSize));
+        else
+            pages = itemDao.findSearchResultSortByDefault(keywords, PageRequest.of(page, pageSize));
+        return pages;
+    }
+
 }

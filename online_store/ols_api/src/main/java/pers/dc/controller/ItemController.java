@@ -39,5 +39,10 @@ public class ItemController {
         return JsonResult.ok(itemService.getCommentsByItemId(itemId, level, page, pageSize));
     }
 
+    @GetMapping("/search")
+    @ApiOperation(value = "「商品搜索」接口", notes = "商品搜索")
+    public JsonResult search(String keywords, String sort, int page, int pageSize) {
+        return JsonResult.ok(itemService.getSearchResult(keywords, sort, page, pageSize));
+    }
 
 }

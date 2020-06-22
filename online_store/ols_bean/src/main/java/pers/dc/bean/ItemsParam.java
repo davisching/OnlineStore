@@ -1,8 +1,12 @@
 package pers.dc.bean;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity
 public class ItemsParam {
 
+  @Id
   private String id;
   private String itemId;
   private String producPlace;

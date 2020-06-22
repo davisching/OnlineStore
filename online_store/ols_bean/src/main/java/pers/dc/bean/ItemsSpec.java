@@ -1,8 +1,13 @@
 package pers.dc.bean;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.util.Date;
 
+@Entity
 public class ItemsSpec {
 
+  @Id
   private String id;
   private String itemId;
   private String name;
@@ -10,9 +15,8 @@ public class ItemsSpec {
   private double discounts;
   private long priceDiscount;
   private long priceNormal;
-  private java.sql.Timestamp createdTime;
-  private java.sql.Timestamp updatedTime;
-
+  private Date createdTime;
+  private Date updatedTime;
 
   public String getId() {
     return id;
@@ -77,21 +81,19 @@ public class ItemsSpec {
   }
 
 
-  public java.sql.Timestamp getCreatedTime() {
+  public Date getCreatedTime() {
     return createdTime;
   }
 
-  public void setCreatedTime(java.sql.Timestamp createdTime) {
+  public void setCreatedTime(Date createdTime) {
     this.createdTime = createdTime;
   }
 
-
-  public java.sql.Timestamp getUpdatedTime() {
+  public Date getUpdatedTime() {
     return updatedTime;
   }
 
-  public void setUpdatedTime(java.sql.Timestamp updatedTime) {
+  public void setUpdatedTime(Date updatedTime) {
     this.updatedTime = updatedTime;
   }
-
 }

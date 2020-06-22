@@ -17,4 +17,5 @@ pers/dc/bean/Orders.class
 pers/dc/bean/vo/SixItem.class
 pers/dc/bean/UserAddress.class
 pers/dc/bean/OrderStatus.class
+pers/dc/bean/vo/ItemInfoVO.class
 pers/dc/bean/Stu.class

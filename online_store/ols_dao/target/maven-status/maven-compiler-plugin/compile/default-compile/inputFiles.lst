@@ -1,5 +1,8 @@
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_dao/src/main/java/pers/dc/dao/StuDao.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_dao/src/main/java/pers/dc/dao/UserDao.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_dao/src/main/java/pers/dc/dao/CarouselDao.java
+/Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_dao/src/main/java/pers/dc/dao/ItemParamDao.java
+/Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_dao/src/main/java/pers/dc/dao/ItemImgDao.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_dao/src/main/java/pers/dc/dao/CategoryDao.java
+/Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_dao/src/main/java/pers/dc/dao/ItemSpecDao.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_dao/src/main/java/pers/dc/dao/ItemDao.java

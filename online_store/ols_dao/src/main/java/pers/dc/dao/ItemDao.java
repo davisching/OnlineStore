@@ -28,4 +28,6 @@ public interface ItemDao extends JpaRepository<Items, String> {
 
     @Query("select new pers.dc.bean.vo.ShopCartVO(spec.itemId, img.url, items.itemName, spec.id, spec.name, spec.priceDiscount, spec.priceNormal) from ItemsSpec spec, ItemsImg img, Items items where spec.id = ?1 and spec.itemId = items.id and spec.itemId = img.itemId and img.isMain = 1")
     ShopCartVO findNewItemInfoForShopCartByItemSpecId(String itemSpecId);
+
+    Items findOneById(String id);
 }

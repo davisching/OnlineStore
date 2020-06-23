@@ -1,17 +1,22 @@
 package pers.dc.bean;
 
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.util.Date;
+
+@Entity
 public class OrderStatus {
 
+  @Id
   private String orderId;
   private long orderStatus;
-  private java.sql.Timestamp createdTime;
-  private java.sql.Timestamp payTime;
-  private java.sql.Timestamp deliverTime;
-  private java.sql.Timestamp successTime;
-  private java.sql.Timestamp closeTime;
-  private java.sql.Timestamp commentTime;
-
+  private Date createdTime;
+  private Date payTime;
+  private Date deliverTime;
+  private Date successTime;
+  private Date closeTime;
+  private Date commentTime;
 
   public String getOrderId() {
     return orderId;
@@ -30,58 +35,51 @@ public class OrderStatus {
     this.orderStatus = orderStatus;
   }
 
-
-  public java.sql.Timestamp getCreatedTime() {
+  public Date getCreatedTime() {
     return createdTime;
   }
 
-  public void setCreatedTime(java.sql.Timestamp createdTime) {
+  public void setCreatedTime(Date createdTime) {
     this.createdTime = createdTime;
   }
 
-
-  public java.sql.Timestamp getPayTime() {
+  public Date getPayTime() {
     return payTime;
   }
 
-  public void setPayTime(java.sql.Timestamp payTime) {
+  public void setPayTime(Date payTime) {
     this.payTime = payTime;
   }
 
-
-  public java.sql.Timestamp getDeliverTime() {
+  public Date getDeliverTime() {
     return deliverTime;
   }
 
-  public void setDeliverTime(java.sql.Timestamp deliverTime) {
+  public void setDeliverTime(Date deliverTime) {
     this.deliverTime = deliverTime;
   }
 
-
-  public java.sql.Timestamp getSuccessTime() {
+  public Date getSuccessTime() {
     return successTime;
   }
 
-  public void setSuccessTime(java.sql.Timestamp successTime) {
+  public void setSuccessTime(Date successTime) {
     this.successTime = successTime;
   }
 
-
-  public java.sql.Timestamp getCloseTime() {
+  public Date getCloseTime() {
     return closeTime;
   }
 
-  public void setCloseTime(java.sql.Timestamp closeTime) {
+  public void setCloseTime(Date closeTime) {
     this.closeTime = closeTime;
   }
 
-
-  public java.sql.Timestamp getCommentTime() {
+  public Date getCommentTime() {
     return commentTime;
   }
 
-  public void setCommentTime(java.sql.Timestamp commentTime) {
+  public void setCommentTime(Date commentTime) {
     this.commentTime = commentTime;
   }
-
 }

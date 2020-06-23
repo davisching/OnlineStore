@@ -5,6 +5,7 @@ pers/dc/validation/FieldMatch$List.class
 pers/dc/validation/FieldMatch.class
 pers/dc/validation/ValidationAdvice.class
 pers/dc/config/Swagger2Config.class
+pers/dc/enums/OrderStatusEnum.class
 pers/dc/enums/CommentRanking.class
 pers/dc/config/CorsConfig.class
 pers/dc/util/DateUtil.class

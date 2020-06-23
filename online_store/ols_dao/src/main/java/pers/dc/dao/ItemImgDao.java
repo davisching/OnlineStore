@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface ItemImgDao extends JpaRepository<ItemsImg, String> {
     List<ItemsImg> findAllByItemId(String itemId);
+    ItemsImg findByItemIdAndIsMain(String itemId, long isMain);
 }

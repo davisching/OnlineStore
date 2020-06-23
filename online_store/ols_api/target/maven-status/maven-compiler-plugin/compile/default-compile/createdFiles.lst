@@ -1,6 +1,7 @@
 pers/dc/controller/IndexController.class
 pers/dc/aspect/ServiceLogAspect.class
 pers/dc/App.class
+pers/dc/controller/OrderController.class
 pers/dc/controller/HelloController.class
 pers/dc/controller/ItemController.class
 pers/dc/controller/AddressController.class

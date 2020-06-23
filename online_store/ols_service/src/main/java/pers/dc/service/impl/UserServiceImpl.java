@@ -53,6 +53,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @Transactional(propagation = Propagation.SUPPORTS)
     public Users userLogin(UserLoginBO userLoginBO) {
         String password = Encryptors.getMD5Str(userLoginBO.getPassword());
         return userDao.findByUsernameAndPassword(userLoginBO.getUsername(), password);

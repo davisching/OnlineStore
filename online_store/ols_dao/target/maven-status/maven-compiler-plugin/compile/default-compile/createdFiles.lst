@@ -6,4 +6,5 @@ pers/dc/dao/StuDao.class
 pers/dc/dao/ItemParamDao.class
 pers/dc/dao/ItemDao.class
 pers/dc/dao/CategoryDao.class
+pers/dc/dao/AddressDao.class
 pers/dc/dao/UserDao.class

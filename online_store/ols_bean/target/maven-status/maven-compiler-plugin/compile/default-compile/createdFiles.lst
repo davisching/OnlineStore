@@ -1,4 +1,5 @@
 pers/dc/bean/ItemsImg.class
+pers/dc/bean/bo/AddressBO.class
 pers/dc/bean/bo/UserLoginBO.class
 pers/dc/bean/Category.class
 pers/dc/bean/vo/ShopCartVO.class

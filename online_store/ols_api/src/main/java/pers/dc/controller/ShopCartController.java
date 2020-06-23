@@ -53,7 +53,7 @@ public class ShopCartController {
                                     HttpServletRequest request, HttpServletResponse response) {
 
         //CookieUtils.setCookie(request, response, "shopcart", JsonUtils.objectToJson(shopCartBOList));
-        
+
 
         if (StringUtils.isBlank(userId) || StringUtils.isBlank(itemSpecId))
             return JsonResult.errorMsg("參數為空！");

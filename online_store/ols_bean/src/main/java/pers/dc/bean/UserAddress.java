@@ -1,20 +1,36 @@
 package pers.dc.bean;
 
+import org.hibernate.annotations.DynamicUpdate;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
+import java.util.Date;
+
+@Entity
 public class UserAddress {
 
+  @Id
   private String id;
   private String userId;
+  @NotBlank
   private String receiver;
+  @NotBlank
   private String mobile;
+  @NotBlank
   private String province;
+  @NotBlank
   private String city;
+  @NotBlank
   private String district;
+  @NotBlank
   private String detail;
   private String extand;
   private long isDefault;
-  private java.sql.Timestamp createdTime;
-  private java.sql.Timestamp updatedTime;
+  private Date createdTime;
+  private Date updatedTime;
 
 
   public String getId() {
@@ -106,22 +122,19 @@ public class UserAddress {
     this.isDefault = isDefault;
   }
 
-
-  public java.sql.Timestamp getCreatedTime() {
+  public Date getCreatedTime() {
     return createdTime;
   }
 
-  public void setCreatedTime(java.sql.Timestamp createdTime) {
+  public void setCreatedTime(Date createdTime) {
     this.createdTime = createdTime;
   }
 
-
-  public java.sql.Timestamp getUpdatedTime() {
+  public Date getUpdatedTime() {
     return updatedTime;
   }
 
-  public void setUpdatedTime(java.sql.Timestamp updatedTime) {
+  public void setUpdatedTime(Date updatedTime) {
     this.updatedTime = updatedTime;
   }
-
 }

@@ -54,7 +54,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Users userLogin(UserLoginBO userLoginBO) {
-            String password = Encryptors.getMD5Str(userLoginBO.getPassword());
-            return userDao.findByUsernameAndPassword(userLoginBO.getUsername(), password);
+        String password = Encryptors.getMD5Str(userLoginBO.getPassword());
+        return userDao.findByUsernameAndPassword(userLoginBO.getUsername(), password);
     }
 }

@@ -50,6 +50,8 @@ public class PassportController {
         CookieUtils.setCookie(request, response, "user",
                 JsonUtils.objectToJson(new UserVO(user)), true);
 
+        // TODO 生成用戶 TOKEN ， 存入 redis 會話 ， 同步 購物車
+
         return JsonResult.ok(user);
     }
 
@@ -59,8 +61,13 @@ public class PassportController {
                             HttpServletRequest request, HttpServletResponse response) {
         Users user = userService.userLogin(userLoginBO);
 
+        if (user == null)
+            return JsonResult.errorMsg("用戶不存在");
+
         CookieUtils.setCookie(request, response, "user",
                 JsonUtils.objectToJson(new UserVO(user)), true);
+
+        // TODO 生成用戶 TOKEN ， 存入 redis 會話 ， 同步 購物車
 
         return JsonResult.ok(user);
     }

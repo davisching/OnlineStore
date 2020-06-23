@@ -3,4 +3,5 @@ pers/dc/aspect/ServiceLogAspect.class
 pers/dc/App.class
 pers/dc/controller/HelloController.class
 pers/dc/controller/ItemController.class
+pers/dc/controller/ShopCartController.class
 pers/dc/controller/PassportController.class

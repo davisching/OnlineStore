@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import pers.dc.bean.Items;
 import pers.dc.bean.vo.SearchResultVO;
+import pers.dc.bean.vo.ShopCartVO;
 import pers.dc.bean.vo.SixItem;
 
 import java.util.List;
@@ -24,4 +25,7 @@ public interface ItemDao extends JpaRepository<Items, String> {
 
     @Query("select new pers.dc.bean.vo.SearchResultVO(i.id, img.url, i.itemName, spec.priceDiscount, i.sellCounts) from Items i, ItemsSpec spec, ItemsImg img where i.id = spec.itemId and i.id = img.itemId and (i.itemName like %:keyword% or i.content like %:keyword%) order by spec.priceDiscount asc ")
     Page<SearchResultVO> findSearchResultSortByPrice(@Param("keyword") String keyword, Pageable pageable);
+
+    @Query("select new pers.dc.bean.vo.ShopCartVO(spec.itemId, img.url, items.itemName, spec.id, spec.name, spec.priceDiscount, spec.priceNormal) from ItemsSpec spec, ItemsImg img, Items items where spec.id = ?1 and spec.itemId = items.id and spec.itemId = img.itemId and img.isMain = 1")
+    ShopCartVO findNewItemInfoForShopCartByItemSpecId(String itemSpecId);
 }

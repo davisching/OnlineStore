@@ -6,7 +6,6 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 import pers.dc.bean.Users;
 import pers.dc.config.ConfigProperties;
-import pers.dc.config.ResourceConfig;
 import pers.dc.dao.UserDao;
 import pers.dc.service.center.CenterUserService;
 
@@ -50,13 +49,12 @@ public class CenterUserServiceImpl implements CenterUserService {
         file = UUID.randomUUID().toString() + file.substring(file.lastIndexOf("."));
         try {
             face.transferTo(new File(ConfigProperties.FACE_FOLDER, file));
-            Users user = userDao.getOne(userId);
-            user.setFace("http://localhost:8088/" + file);
-            user.setUpdatedTime(new Date());
-            return userDao.save(user);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return null;
+        Users user = userDao.getOne(userId);
+        user.setFace("http://localhost:8088/" + file);
+        user.setUpdatedTime(new Date());
+        return userDao.save(user);
     }
 }

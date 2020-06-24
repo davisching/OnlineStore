@@ -1,10 +1,11 @@
 pers/dc/controller/center/CenterController.class
 pers/dc/controller/IndexController.class
-pers/dc/aspect/ServiceLogAspect.class
 pers/dc/App.class
+pers/dc/exception/CustomExceptionHandler.class
 pers/dc/controller/OrderController.class
-pers/dc/controller/HelloController.class
 pers/dc/controller/ItemController.class
+pers/dc/aspect/ServiceLogAspect.class
+pers/dc/controller/HelloController.class
 pers/dc/controller/AddressController.class
 pers/dc/controller/ShopCartController.class
 pers/dc/controller/PassportController.class

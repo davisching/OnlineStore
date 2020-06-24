@@ -19,9 +19,10 @@ spring:
     hibernate:
       ddl-auto: update
     open-in-view: true
-#    properties:
-#      hibernate:
-#        format_sql: true
+  servlet:
+    multipart:
+      max-file-size: 1MB
+      max-request-size: 10MB
 
 config:
   FACE_FOLDER: /Users/darvis/Documents/upload/face/

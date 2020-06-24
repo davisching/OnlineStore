@@ -12,4 +12,6 @@ public interface ItemService {
     CommentCountsVO getCommentCountsByItemId(String itemId);
     Page<CommentRecordVO> getCommentsByItemId(String itemId, Long level, int page, int pageSize);
     Page<SearchResultVO> getSearchResult(String keywords, String sort, int page, int pageSize);
+    Page<SearchResultVO> getSearchResultByCatId(long catId, String sort, int page, int pageSize);
+
 }

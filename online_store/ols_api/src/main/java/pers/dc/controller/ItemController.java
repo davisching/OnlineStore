@@ -45,4 +45,9 @@ public class ItemController {
         return JsonResult.ok(itemService.getSearchResult(keywords, sort, page, pageSize));
     }
 
+    @GetMapping("/catItems")
+    @ApiOperation(value = "「根據商品分類搜索商品」接口", notes = "根據商品分類搜索商品")
+    public JsonResult searchByCatId(long catId, String sort, int page, int pageSize) {
+        return JsonResult.ok(itemService.getSearchResultByCatId(catId, sort, page, pageSize));
+    }
 }

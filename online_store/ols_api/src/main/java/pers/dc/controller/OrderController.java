@@ -26,7 +26,6 @@ public class OrderController {
     public JsonResult createOrder(@RequestBody OrderBO orderBO) {
         if (orderBO == null)
             return JsonResult.errorMsg("輸入為空");
-        orderService.createOrder(orderBO);
-        return JsonResult.ok();
+        return JsonResult.ok(orderService.createOrder(orderBO));
     }
 }

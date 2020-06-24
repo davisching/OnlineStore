@@ -33,7 +33,7 @@ public class OrderServiceImpl implements OrderService {
 
 
     @Override
-    public void createOrder(OrderBO orderBO) {
+    public String createOrder(OrderBO orderBO) {
         Orders order = new Orders();
         String orderId = UUID.randomUUID().toString();
         order.setId(orderId);
@@ -90,10 +90,12 @@ public class OrderServiceImpl implements OrderService {
 
         OrderStatus orderStatus = new OrderStatus();
         orderStatus.setOrderId(orderId);
-        orderStatus.setOrderStatus(OrderStatusEnum.WAIT_PAY.getValue());
+        orderStatus.setOrderStatus(OrderStatusEnum.PAID.getValue());
         orderStatus.setCreatedTime(new Date());
         orderStatusDao.save(orderStatus);
 
         orderDao.save(order);
+
+        return orderId;
     }
 }

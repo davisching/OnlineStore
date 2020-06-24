@@ -29,5 +29,14 @@ public interface ItemDao extends JpaRepository<Items, String> {
     @Query("select new pers.dc.bean.vo.ShopCartVO(spec.itemId, img.url, items.itemName, spec.id, spec.name, spec.priceDiscount, spec.priceNormal) from ItemsSpec spec, ItemsImg img, Items items where spec.id = ?1 and spec.itemId = items.id and spec.itemId = img.itemId and img.isMain = 1")
     ShopCartVO findNewItemInfoForShopCartByItemSpecId(String itemSpecId);
 
+    @Query("select new pers.dc.bean.vo.SearchResultVO(i.id, img.url, i.itemName, spec.priceDiscount, i.sellCounts) from Items i, ItemsSpec spec, ItemsImg img where i.id = spec.itemId and i.id = img.itemId and i.catId = ?1 order by i.updatedTime desc ")
+    Page<SearchResultVO> findSearchResultByCatIdSortByDefault(long catId, Pageable pageable);
+
+    @Query("select new pers.dc.bean.vo.SearchResultVO(i.id, img.url, i.itemName, spec.priceDiscount, i.sellCounts) from Items i, ItemsSpec spec, ItemsImg img where i.id = spec.itemId and i.id = img.itemId and i.catId = ?1 order by i.sellCounts desc")
+    Page<SearchResultVO> findSearchResultByCatIdSortBySellCounts(long catId, Pageable pageable);
+
+    @Query("select new pers.dc.bean.vo.SearchResultVO(i.id, img.url, i.itemName, spec.priceDiscount, i.sellCounts) from Items i, ItemsSpec spec, ItemsImg img where i.id = spec.itemId and i.id = img.itemId and i.catId = ?1 order by spec.priceDiscount asc ")
+    Page<SearchResultVO> findSearchResultByCatIdSortByPrice(long catId, Pageable pageable);
+
     Items findOneById(String id);
 }

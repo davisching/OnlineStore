@@ -31,9 +31,13 @@ public class AddressServiceImpl implements AddressService {
     @Transactional
     public UserAddress addAddress(UserAddress userAddress) {
         userAddress.setId(UUID.randomUUID().toString());
-        userAddress.setIsDefault(0);
         userAddress.setCreatedTime(new Date());
         userAddress.setUpdatedTime(new Date());
+        UserAddress defaultOne = addressDao.findByUserIdAndIsDefault(userAddress.getUserId(), 1);
+        if (defaultOne == null)
+            userAddress.setIsDefault(1);
+        else
+            userAddress.setIsDefault(0);
         return addressDao.save(userAddress);
     }
 
@@ -62,9 +66,11 @@ public class AddressServiceImpl implements AddressService {
     @Transactional
     public void setDefault(String userId, String addressId) {
         UserAddress defaultOne = addressDao.findByUserIdAndIsDefault(userId, 1);
-        defaultOne.setIsDefault(0);
-        defaultOne.setUpdatedTime(new Date());
-        addressDao.save(defaultOne);
+        if (defaultOne != null) {
+            defaultOne.setIsDefault(0);
+            defaultOne.setUpdatedTime(new Date());
+            addressDao.save(defaultOne);
+        }
         UserAddress userAddress = addressDao.getOne(addressId);
         userAddress.setIsDefault(1);
         userAddress.setUpdatedTime(new Date());

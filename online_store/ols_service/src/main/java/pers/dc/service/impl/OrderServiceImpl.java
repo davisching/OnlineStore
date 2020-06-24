@@ -1,6 +1,7 @@
 package pers.dc.service.impl;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import pers.dc.bean.*;
 import pers.dc.bean.bo.OrderBO;
 import pers.dc.dao.*;
@@ -33,6 +34,7 @@ public class OrderServiceImpl implements OrderService {
 
 
     @Override
+    @Transactional
     public String createOrder(OrderBO orderBO) {
         Orders order = new Orders();
         String orderId = UUID.randomUUID().toString();

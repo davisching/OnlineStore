@@ -2,6 +2,7 @@ package pers.dc.bean;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
 import java.util.Date;
 
 @Entity
@@ -12,6 +13,8 @@ public class Users {
 
   private String username;
   private String password;
+
+  @NotBlank
   private String nickname;
   private String realname;
   private String face;

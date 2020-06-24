@@ -2,11 +2,13 @@
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_common/src/main/java/pers/dc/util/DateUtil.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_common/src/main/java/pers/dc/enums/Gender.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_common/src/main/java/pers/dc/enums/CommentRanking.java
-/Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_common/src/main/java/pers/dc/util/JsonUtils.java
-/Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_common/src/main/java/pers/dc/util/CookieUtils.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_common/src/main/java/pers/dc/config/CorsConfig.java
-/Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_common/src/main/java/pers/dc/config/Swagger2Config.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_common/src/main/java/pers/dc/util/Encryptors.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_common/src/main/java/pers/dc/enums/OrderStatusEnum.java
-/Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_common/src/main/java/pers/dc/validation/FieldMatch.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_common/src/main/java/pers/dc/validation/ValidationAdvice.java
+/Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_common/src/main/java/pers/dc/config/ConfigProperties.java
+/Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_common/src/main/java/pers/dc/util/JsonUtils.java
+/Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_common/src/main/java/pers/dc/util/CookieUtils.java
+/Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_common/src/main/java/pers/dc/config/Swagger2Config.java
+/Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_common/src/main/java/pers/dc/config/ResourceConfig.java
+/Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_common/src/main/java/pers/dc/validation/FieldMatch.java

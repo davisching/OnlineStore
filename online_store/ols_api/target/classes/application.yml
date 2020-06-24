@@ -23,4 +23,7 @@ spring:
 #      hibernate:
 #        format_sql: true
 
+config:
+  FACE_FOLDER: /Users/darvis/Documents/upload/face/
+
 

@@ -116,6 +116,7 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
+    @Transactional(propagation = Propagation.SUPPORTS)
     public Page<SearchResultVO> getSearchResultByCatId(long catId, String sort, int page, int pageSize) {
         page -= 1;
         Page<SearchResultVO> pages;

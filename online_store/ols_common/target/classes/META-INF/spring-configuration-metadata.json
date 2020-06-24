@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "config",
+      "type": "pers.dc.config.ConfigProperties",
+      "sourceType": "pers.dc.config.ConfigProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "config.f-a-c-e-f-o-l-d-e-r",
+      "type": "java.lang.String",
+      "sourceType": "pers.dc.config.ConfigProperties"
+    }
+  ],
+  "hints": []
+}

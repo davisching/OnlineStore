@@ -8,7 +8,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import pers.dc.bean.bo.OrderBO;
 import pers.dc.service.OrderService;
+import pers.dc.util.CookieUtils;
 import pers.dc.util.JsonResult;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 @RestController
 @RequestMapping("/orders")
@@ -23,9 +27,11 @@ public class OrderController {
 
     @PostMapping("/create")
     @ApiOperation(value = "「訂單創建」接口", notes = "創建訂單")
-    public JsonResult createOrder(@RequestBody OrderBO orderBO) {
+    public JsonResult createOrder(@RequestBody OrderBO orderBO,
+                                  HttpServletRequest request, HttpServletResponse response) {
         if (orderBO == null)
             return JsonResult.errorMsg("輸入為空");
+        CookieUtils.setCookie(request, response, "shopcart", "");
         return JsonResult.ok(orderService.createOrder(orderBO));
     }
 }

@@ -9,6 +9,7 @@ pers/dc/config/Swagger2Config.class
 pers/dc/config/ConfigProperties.class
 pers/dc/enums/OrderStatusEnum.class
 pers/dc/enums/CommentRanking.class
+pers/dc/config/CorsConfig.class
 pers/dc/util/DateUtil.class
 pers/dc/config/MyWebMvcConfigurer.class
 pers/dc/util/Encryptors.class

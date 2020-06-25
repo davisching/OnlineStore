@@ -14,13 +14,13 @@ public class MyWebMvcConfigurer implements WebMvcConfigurer {
                 .addResourceLocations("file:"+ConfigProperties.FACE_FOLDER);
     }
 
-    @Override
-    public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**")
-                .allowedHeaders("*")
-                .allowedMethods("*")
-                .allowCredentials(true)
-                .maxAge(1800)
-                .allowedOrigins("http://localhost:8080");
-    }
+//    @Override
+//    public void addCorsMappings(CorsRegistry registry) {
+//        registry.addMapping("/**")
+//                .allowedHeaders("*")
+//                .allowedMethods("*")
+//                .allowCredentials(true)
+//                .maxAge(1800)
+//                .allowedOrigins("http://localhost:8080");
+//    }
 }

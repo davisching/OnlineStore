@@ -44,5 +44,22 @@ public class MyOrdersController {
         return JsonResult.ok(myOrdersService.getOrderByUserIdAndStatus(userId, orderStatus, page, pageSize));
     }
 
+    @PostMapping("/delete")
+    @ApiOperation(value = "「刪除訂單」接口", notes = "刪除訂單")
+    public JsonResult deleteOrders(String userId, String orderId) {
+        if (StringUtils.isBlank(userId) || StringUtils.isBlank(orderId))
+            return JsonResult.errorMsg("輸入不能為空");
+        myOrdersService.deleteOrder(userId, orderId);
+        return JsonResult.ok();
+    }
+
+    @PostMapping("/confirmReceive")
+    @ApiOperation(value = "「確認收貨」接口", notes = "確認收貨")
+    public JsonResult confirmReceive(String userId, String orderId) {
+        if (StringUtils.isBlank(userId) || StringUtils.isBlank(orderId))
+            return JsonResult.errorMsg("輸入不能為空");
+        myOrdersService.confirmReceive(userId, orderId);
+        return JsonResult.ok();
+    }
 
 }

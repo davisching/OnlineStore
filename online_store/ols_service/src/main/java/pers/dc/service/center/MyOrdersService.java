@@ -9,4 +9,6 @@ public interface MyOrdersService {
     OrderStatusCountVO getOrderStatusCount(String userId);
     Page<OrderTrendVO> getOrderTrends(String userId, int page, int pageSize);
     Page<OrderVO> getOrderByUserIdAndStatus(String userId, Long orderStatus, int page, int pageSize);
+    void deleteOrder(String userId, String orderId);
+    void confirmReceive(String userId, String orderId);
 }

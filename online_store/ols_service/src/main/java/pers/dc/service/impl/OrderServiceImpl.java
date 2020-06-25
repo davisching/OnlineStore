@@ -94,6 +94,7 @@ public class OrderServiceImpl implements OrderService {
         orderStatus.setOrderId(orderId);
         orderStatus.setOrderStatus(OrderStatusEnum.PAID.getValue());
         orderStatus.setCreatedTime(new Date());
+        orderStatus.setPayTime(new Date());
         orderStatusDao.save(orderStatus);
 
         orderDao.save(order);

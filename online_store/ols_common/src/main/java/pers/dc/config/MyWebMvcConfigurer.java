@@ -11,7 +11,8 @@ public class MyWebMvcConfigurer implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/**")
-                .addResourceLocations("file:"+ConfigProperties.FACE_FOLDER);
+                .addResourceLocations("file:"+ConfigProperties.FACE_FOLDER)
+                .addResourceLocations("classpath:/META-INF/resources/");
     }
 
 //    @Override

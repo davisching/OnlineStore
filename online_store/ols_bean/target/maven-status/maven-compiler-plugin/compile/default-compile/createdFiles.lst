@@ -4,6 +4,7 @@ pers/dc/bean/bo/UserLoginBO.class
 pers/dc/bean/Category.class
 pers/dc/bean/vo/ShopCartVO.class
 pers/dc/bean/Users.class
+pers/dc/bean/vo/center/OrderStatusCountVO.class
 pers/dc/bean/Orders.class
 pers/dc/bean/vo/SixItem.class
 pers/dc/bean/vo/ItemInfoVO.class

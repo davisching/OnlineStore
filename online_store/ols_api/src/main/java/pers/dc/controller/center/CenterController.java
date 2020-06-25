@@ -63,4 +63,12 @@ public class CenterController {
         return JsonResult.ok();
     }
 
+    @PostMapping("/myorders/statusCounts")
+    @ApiOperation(value = "「獲取各狀態訂單數量」接口", notes = "獲取各狀態訂單數量")
+    public JsonResult getStatusCounts(String userId) {
+        if (StringUtils.isBlank(userId))
+            return JsonResult.errorMsg("用戶ID不能為空");
+        return JsonResult.ok(centerUserService.getOrderStatusCount(userId));
+    }
+
 }

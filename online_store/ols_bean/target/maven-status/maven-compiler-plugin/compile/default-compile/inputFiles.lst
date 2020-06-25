@@ -16,6 +16,7 @@
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/ItemsComments.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/OrderStatus.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/vo/CommentCountsVO.java
+/Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/vo/center/OrderStatusCountVO.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/ItemsSpec.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/Carousel.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/vo/IndexSubCat.java

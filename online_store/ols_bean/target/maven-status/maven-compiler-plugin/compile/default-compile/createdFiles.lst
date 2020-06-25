@@ -25,6 +25,7 @@ pers/dc/bean/vo/CommentCountsVO.class
 pers/dc/bean/ItemsParam.class
 pers/dc/bean/vo/IndexSubCatVO.class
 pers/dc/bean/vo/IndexSubCat.class
+pers/dc/bean/vo/center/MyCommentVO.class
 pers/dc/bean/UserAddress.class
 pers/dc/bean/OrderStatus.class
 pers/dc/bean/vo/CommentRecordVO.class

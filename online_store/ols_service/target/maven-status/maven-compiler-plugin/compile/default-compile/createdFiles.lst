@@ -13,6 +13,8 @@ pers/dc/service/CategoryService.class
 pers/dc/service/impl/CarouselServiceImpl.class
 pers/dc/service/center/impl/MyOrdersServiceImpl.class
 pers/dc/service/UserService.class
+pers/dc/service/center/impl/MyCommentsServiceImpl.class
+pers/dc/service/center/MyCommentsService.class
 pers/dc/service/impl/OrderServiceImpl.class
 pers/dc/service/impl/TestServiceImpl.class
 pers/dc/service/center/CenterUserService.class

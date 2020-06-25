@@ -10,11 +10,13 @@
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/UserAddress.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/OrderItems.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/vo/IndexSubCatVO.java
+/Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/vo/center/AddCommentBO.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/Items.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/Category.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/Orders.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/ItemsComments.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/OrderStatus.java
+/Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/vo/center/MyCommentVO.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/vo/CommentCountsVO.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/vo/center/OrderStatusCountVO.java
 /Users/darvis/Documents/GitHub/OnlineStore/online_store/ols_bean/src/main/java/pers/dc/bean/vo/center/OrderVO.java

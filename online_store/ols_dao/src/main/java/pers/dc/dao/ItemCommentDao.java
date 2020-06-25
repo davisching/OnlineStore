@@ -21,5 +21,4 @@ public interface ItemCommentDao extends JpaRepository<ItemsComments, String> {
 
     @Query("select new pers.dc.bean.vo.center.MyCommentVO(img.url, c.itemName, c.content, c.sepcName, c.createdTime) from ItemsComments c, ItemsImg img where c.userId = ?1 and c.itemId = img.itemId order by c.createdTime desc")
     Page<MyCommentVO> findMyComment(String userId, Pageable pageable);
-
 }

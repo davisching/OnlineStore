@@ -104,4 +104,20 @@ public class ItemsComments {
   public void setUpdatedTime(Date updatedTime) {
     this.updatedTime = updatedTime;
   }
+
+  @Override
+  public String toString() {
+    return "ItemsComments{" +
+            "id='" + id + '\'' +
+            ", userId='" + userId + '\'' +
+            ", itemId='" + itemId + '\'' +
+            ", itemName='" + itemName + '\'' +
+            ", itemSpecId='" + itemSpecId + '\'' +
+            ", sepcName='" + sepcName + '\'' +
+            ", commentLevel=" + commentLevel +
+            ", content='" + content + '\'' +
+            ", createdTime=" + createdTime +
+            ", updatedTime=" + updatedTime +
+            '}';
+  }
 }

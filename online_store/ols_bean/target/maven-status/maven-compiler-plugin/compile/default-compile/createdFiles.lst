@@ -28,5 +28,6 @@ pers/dc/bean/vo/IndexSubCat.class
 pers/dc/bean/vo/center/MyCommentVO.class
 pers/dc/bean/UserAddress.class
 pers/dc/bean/OrderStatus.class
+pers/dc/bean/vo/center/AddCommentBO.class
 pers/dc/bean/vo/CommentRecordVO.class
 pers/dc/bean/Stu.class

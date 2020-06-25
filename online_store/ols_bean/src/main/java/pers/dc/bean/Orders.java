@@ -157,4 +157,25 @@ public class Orders {
   public void setUpdatedTime(Date updatedTime) {
     this.updatedTime = updatedTime;
   }
+
+  @Override
+  public String toString() {
+    return "Orders{" +
+            "id='" + id + '\'' +
+            ", userId='" + userId + '\'' +
+            ", receiverName='" + receiverName + '\'' +
+            ", receiverMobile='" + receiverMobile + '\'' +
+            ", receiverAddress='" + receiverAddress + '\'' +
+            ", totalAmount=" + totalAmount +
+            ", realPayAmount=" + realPayAmount +
+            ", postAmount=" + postAmount +
+            ", payMethod=" + payMethod +
+            ", leftMsg='" + leftMsg + '\'' +
+            ", extand='" + extand + '\'' +
+            ", isComment=" + isComment +
+            ", isDelete=" + isDelete +
+            ", createdTime=" + createdTime +
+            ", updatedTime=" + updatedTime +
+            '}';
+  }
 }

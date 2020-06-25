@@ -2,6 +2,7 @@ pers/dc/service/impl/ItemServiceImpl.class
 pers/dc/service/impl/ShopCartServiceImpl.class
 pers/dc/service/ShopCartService.class
 pers/dc/service/center/impl/CenterUserServiceImpl.class
+pers/dc/service/center/MyOrdersService.class
 pers/dc/service/CarouselService.class
 pers/dc/service/impl/UserServiceImpl.class
 pers/dc/service/AddressService.class
@@ -10,6 +11,7 @@ pers/dc/service/TestService.class
 pers/dc/service/OrderService.class
 pers/dc/service/CategoryService.class
 pers/dc/service/impl/CarouselServiceImpl.class
+pers/dc/service/center/impl/MyOrdersServiceImpl.class
 pers/dc/service/UserService.class
 pers/dc/service/impl/OrderServiceImpl.class
 pers/dc/service/impl/TestServiceImpl.class

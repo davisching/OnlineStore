@@ -5,6 +5,7 @@ pers/dc/exception/CustomExceptionHandler.class
 pers/dc/controller/OrderController.class
 pers/dc/controller/ItemController.class
 pers/dc/aspect/ServiceLogAspect.class
+pers/dc/controller/center/MyOrdersController.class
 pers/dc/controller/HelloController.class
 pers/dc/controller/AddressController.class
 pers/dc/controller/ShopCartController.class

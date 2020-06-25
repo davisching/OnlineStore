@@ -9,6 +9,7 @@ pers/dc/bean/Orders.class
 pers/dc/bean/vo/SixItem.class
 pers/dc/bean/vo/ItemInfoVO.class
 pers/dc/bean/bo/OrderBO.class
+pers/dc/bean/vo/center/OrderTrendVO.class
 pers/dc/bean/ItemsSpec.class
 pers/dc/bean/bo/ShopCartBO.class
 pers/dc/bean/vo/SearchResultVO.class

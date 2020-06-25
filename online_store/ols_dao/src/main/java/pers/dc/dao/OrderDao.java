@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import pers.dc.bean.Orders;
 import pers.dc.bean.vo.center.OrderTrendVO;
+import pers.dc.bean.vo.center.OrderVO;
 
 import java.util.List;
 
@@ -16,4 +17,10 @@ public interface OrderDao extends JpaRepository<Orders, String> {
 
     @Query("select new pers.dc.bean.vo.center.OrderTrendVO(o.id, s.orderStatus, s.payTime, s.deliverTime, s.successTime) from Orders o, OrderStatus s where o.userId = ?1 and o.id = s.orderId order by o.updatedTime desc")
     Page<OrderTrendVO> findTrendByUserId(String userId, Pageable pageable);
+
+    @Query("select new pers.dc.bean.vo.center.OrderVO(o.id, s.createdTime, o.payMethod, o.realPayAmount, o.postAmount, s.orderStatus, o.isComment) from Orders o, OrderStatus s where o.userId = ?1 and o.id = s.orderId and s.orderStatus = ?2 order by o.updatedTime desc")
+    Page<OrderVO> findOrdersByUserIdWithOrderStatus(String userId, long orderStatus, Pageable pageable);
+
+    @Query("select new pers.dc.bean.vo.center.OrderVO(o.id, s.createdTime, o.payMethod, o.realPayAmount, o.postAmount, s.orderStatus, o.isComment) from Orders o, OrderStatus s where o.userId = ?1 and o.id = s.orderId order by o.updatedTime desc")
+    Page<OrderVO> findOrdersByUserId(String userId, Pageable pageable);
 }

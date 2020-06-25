@@ -11,7 +11,7 @@ import pers.dc.util.JsonResult;
 
 @RestController
 @RequestMapping("/myorders")
-@Api(tags = "「用戶中心」相關接口")
+@Api(tags = "「用戶中心 - 訂單」相關接口")
 public class MyOrdersController {
 
     final MyOrdersService myOrdersService;
@@ -35,4 +35,14 @@ public class MyOrdersController {
             return JsonResult.errorMsg("用戶ID不能為空");
         return JsonResult.ok(myOrdersService.getOrderTrends(userId, page, pageSize));
     }
+
+    @PostMapping("/query")
+    @ApiOperation(value = "「根據狀態查詢訂單」接口", notes = "根據狀態查詢訂單")
+    public JsonResult queryOrders(String userId, Long orderStatus, int page, int pageSize) {
+        if (StringUtils.isBlank(userId))
+            return JsonResult.errorMsg("用戶ID不能為空");
+        return JsonResult.ok(myOrdersService.getOrderByUserIdAndStatus(userId, orderStatus, page, pageSize));
+    }
+
+
 }

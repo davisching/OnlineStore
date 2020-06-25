@@ -7,16 +7,20 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import pers.dc.bean.vo.center.OrderStatusCountVO;
 import pers.dc.bean.vo.center.OrderTrendVO;
+import pers.dc.bean.vo.center.OrderVO;
 import pers.dc.dao.OrderDao;
+import pers.dc.dao.OrderItemsDao;
 import pers.dc.service.center.MyOrdersService;
 
 @Service
 public class MyOrdersServiceImpl implements MyOrdersService {
 
     final OrderDao orderDao;
+    final OrderItemsDao orderItemsDao;
 
-    public MyOrdersServiceImpl(OrderDao orderDao) {
+    public MyOrdersServiceImpl(OrderDao orderDao, OrderItemsDao orderItemsDao) {
         this.orderDao = orderDao;
+        this.orderItemsDao = orderItemsDao;
     }
 
     @Override
@@ -38,5 +42,17 @@ public class MyOrdersServiceImpl implements MyOrdersService {
     @Transactional(propagation = Propagation.SUPPORTS)
     public Page<OrderTrendVO> getOrderTrends(String userId, int page, int pageSize) {
         return orderDao.findTrendByUserId(userId, PageRequest.of(--page, pageSize));
+    }
+
+    @Override
+    @Transactional(propagation = Propagation.SUPPORTS)
+    public Page<OrderVO> getOrderByUserIdAndStatus(String userId, Long orderStatus, int page, int pageSize) {
+        Page<OrderVO> res;
+        if (orderStatus == null || orderStatus == 0)
+            res = orderDao.findOrdersByUserId(userId, PageRequest.of(--page, pageSize));
+        else
+            res = orderDao.findOrdersByUserIdWithOrderStatus(userId, orderStatus, PageRequest.of(--page, pageSize));
+        res.forEach(order -> order.setSubOrderItemList(orderItemsDao.findAllByOrOrderId(order.getOrderId())));
+        return res;
     }
 }

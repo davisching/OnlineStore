@@ -9,6 +9,7 @@ import pers.dc.enums.OrderStatusEnum;
 import pers.dc.service.OrderService;
 
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 @Service
@@ -100,5 +101,17 @@ public class OrderServiceImpl implements OrderService {
         orderDao.save(order);
 
         return orderId;
+    }
+
+    @Override
+    public void deliveryReceived() {
+        orderStatusDao.findByOrderStatus(OrderStatusEnum.PAID.getValue())
+                .forEach(orderStatus -> {
+                    if (new Date().getTime() - orderStatus.getPayTime().getTime() >= 3 * 60 * 1000) {
+                        orderStatus.setOrderStatus(OrderStatusEnum.DELIVERED.getValue());
+                        orderStatus.setDeliverTime(new Date());
+                        orderStatusDao.save(orderStatus);
+                    }
+                });
     }
 }

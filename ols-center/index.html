@@ -25,7 +25,7 @@
 <body>
 	<div id="center">
 		<div class="nav-table">
-			<div class="long-title"><span class="all-goods" style="font-weight: bold;">用户中心</span></div>
+			<div class="long-title"><span class="all-goods" style="font-weight: bold;"><a href="http://localhost:8080/ols-shop">返回商城</a></span></div>
 		</div>
 		<b class="line"></b>
 		<div class="center">
@@ -83,7 +83,7 @@
 							<!--物流 -->
 							<div class="m-logistics">
 								<div class="s-bar">
-									<i class="s-icon"></i>订单动向
+									<i class="s-icon"></i>订单动向 (付款成功)
 								</div>
 								<div class="s-content">
 									<ul class="lg-list">
@@ -147,15 +147,9 @@
 				</div>
 				<!--底部-->
 				<div class="footer ">
-					<div class="footer-hd ">
-						<p><a href="https://www.imooc.com/" target="_blank">慕课网</a> <b>|</b> <a
-								href="https://coding.imooc.com/class/217.html" target="_blank">分布式架构仿抖音短视频</a> <b>|</b>
-							<a href="https://coding.imooc.com/class/261.html" target="_blank">Netty仿微信聊天</a> <b>|</b> <a
-								href="https://coding.imooc.com/class/201.html" target="_blank">Zookeeper与dubbo入门</a>
-							<b>|</b> <a href="https://coding.imooc.com/class/293.html" target="_blank">支付宝小程序</a></p>
-					</div>
+				
 					<div class="footer-bd ">
-						<p><em>© 2019 imooc.com 京ICP备12003892号-11 北京奥鹏文化传媒有限公司 版权所有</em></p>
+						<p><em>© 2020 Davis Ching 網站開發個人練習</em></p>
 					</div>
 				</div>
 			</div>
@@ -266,7 +260,7 @@
 						.then(res => {
 							if (res.data.status == 200) {
 								var grid = res.data.data;
-								var orderTrendList = grid.rows;
+								var orderTrendList = grid.content;
 								// console.log(orderTrendList);
 								this.orderTrendList = orderTrendList;
 
@@ -285,8 +279,8 @@
 									orderTrendList[i].successTime = formatedSuccessTime;
 								}
 
-								var maxPage = grid.total; // 获得总页数
-								var total = grid.records; // 获得总记录数
+								var maxPage = grid.totalPages; // 获得总页数
+								var total = grid.totalElements; // 获得总记录数
 
 								this.maxPage = maxPage;
 								this.total = total;

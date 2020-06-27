@@ -57,7 +57,7 @@
 
 
 	<div class="footer ">
-		<div class="footer-hd ">
+		<!-- <div class="footer-hd ">
 			<p>
 				<a href="https://www.imooc.com/" target="_blank">慕课网</a>
 				<b>|</b>
@@ -69,10 +69,10 @@
 				<b>|</b>
 				<a href="https://coding.imooc.com/class/293.html" target="_blank">支付宝小程序</a>
 			</p>
-		</div>
+		</div> -->
 		<div class="footer-bd ">
 			<p>
-				<em>© 2019 imooc.com 京ICP备12003892号-11 北京奥鹏文化传媒有限公司 版权所有</em>
+				<em>© 2020 Davis Ching 網站開發個人練習</em>
 			</p>
 		</div>
 	</div>
@@ -112,11 +112,11 @@
 						return;
 					}
 
-					var userCreationBO = {
+					var userBO = {
 						username: this.username,
 						password: this.password
 					};
-					// console.log(userCreationBO);
+					// console.log(userBO);
 
 					var serverUrl = app.serverUrl;
 
@@ -124,7 +124,7 @@
 					// form提交
 					axios.defaults.withCredentials = true;
 					// console.log(axios.defaults);
-					axios.post(serverUrl + '/passport/login', userCreationBO)
+					axios.post(serverUrl + '/passport/login', userBO)
 						.then(res => {
 							if (res.data.status == 200) {
 								var user = res.data;

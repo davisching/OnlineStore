@@ -27,7 +27,7 @@
 
 <body>
 
-<div class="attention">本电商购物平台为慕课网演示网站，仅供学习和交流。所有交易金额均为0.01元，并且不会真实发货！</div>
+<div class="attention">本網站為個人練習網站，非真實購物網站，根據慕課提供的前端逆向生成後端代碼</div>
 
 <!-- <div id="index" @scroll="handleScroll"> -->
 <div id="index">
@@ -115,57 +115,7 @@
 	<div class="shopMainbg">
 		<div class="shopMain" id="shopmain">
 
-			<div class="am-g am-g-fixed recommendation">
-				<div class="clock am-u-sm-3">
-					<img src="course/2019.png" style="margin-top: 36px;"></img>
-					<p style="font-weight: bold;">实战<br>推荐</p>
-				</div>
-
-				<div class="am-u-sm-4 am-u-lg-3 ">
-					<div class="info ">
-						<h3>分布式架构实战</h3>
-						<h4>SpringBoot仿抖音</h4>
-					</div>
-					<div class="recommendationMain one">
-						<a href="https://coding.imooc.com/class/217.html" target="_blank">
-							<img src="course/douyin.jpg"></img>
-						</a>
-					</div>
-				</div>
-				<div class="am-u-sm-4 am-u-lg-3 ">
-					<div class="info ">
-						<h3>Netty聊天实战</h3>
-						<h4>SpringBoot仿微信</h4>
-					</div>
-					<div class="recommendationMain two">
-						<a href="https://coding.imooc.com/class/261.html" target="_blank">
-							<img src="course/weixin.jpg"></img>
-						</a>
-					</div>
-				</div>
-				<div class="am-u-sm-4 am-u-lg-3 ">
-					<div class="info ">
-						<h3>分布式协调中间件</h3>
-						<h4>Zookeeper入门</h4>
-					</div>
-					<div class="recommendationMain three">
-						<a href="https://coding.imooc.com/class/201.html" target="_blank">
-							<img src="course/zk.jpg"></img>
-						</a>
-					</div>
-				</div>
-				<!-- <div class="am-u-sm-4 am-u-lg-3 ">
-							<div class="info ">
-								<h3>支付宝小程序</h3>
-								<h4>移动端电商实战</h4>
-							</div>
-							<div class="recommendationMain four">
-								<a href="https://coding.imooc.com/class/293.html" target="_blank">
-									<img src="course/alipay.jpg"></img>
-								</a>
-							</div>
-						</div> -->
-			</div>
+			
 			<div class="clear "></div>
 			<!--热门活动 -->
 
@@ -237,7 +187,7 @@
 			</div>
 			
 			<div class="footer ">
-				<div class="footer-hd ">
+				<!-- <div class="footer-hd ">
 					<p>
 						<a href="https://www.imooc.com/" target="_blank">慕课网</a>
 						<b>|</b>
@@ -249,10 +199,10 @@
 						<b>|</b>
 						<a href="https://coding.imooc.com/class/293.html" target="_blank">支付宝小程序</a>
 					</p>
-				</div>
+				</div> -->
 				<div class="footer-bd ">
 					<p>
-						<em>© 2019 imooc.com 京ICP备12003892号-11 北京奥鹏文化传媒有限公司 版权所有</em>
+						<em>© 2020 Davis Ching 網站開發個人練習</em>
 					</p>
 				</div>
 			</div>
@@ -400,7 +350,7 @@
 					var userIsLogin = this.userIsLogin;
 					if (!userIsLogin) {
 						// 用户未登录，则跳转
-						window.location.href = "login.html?returnUrl=" + app.centerServerUrl;
+						window.location.href = "login.html?returnUrl=" + app.shopServerUrl;
 					} else {
 						window.location.href = app.centerServerUrl;
 					}

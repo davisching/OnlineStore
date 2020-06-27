@@ -132,7 +132,7 @@
 						</p>
 					</div>
 					<div class="footer-bd ">
-						<p><em>© 2019 imooc.com 京ICP备12003892号-11 北京奥鹏文化传媒有限公司 版权所有</em></p>
+						<p><em>© 2020 Davis Ching 網站開發個人練習</em></p>
 					</div>
 				</div>
 			</div>
@@ -335,11 +335,11 @@
 						.then(res => {
 							if (res.data.status == 200) {
 								var grid = res.data.data;
-								var itemsList = grid.rows;
+								var itemsList = grid.content;
 								this.itemsList = itemsList;
 
-								var maxPage = grid.total;		// 获得总页数
-								var total = grid.records;		// 获得总记录数
+								var maxPage = grid.totalPages;		// 获得总页数
+								var total = grid.totalElements;		// 获得总记录数
 								
 								this.maxPage = maxPage;
 								this.total = total;
@@ -359,11 +359,11 @@
 						.then(res => {
 							if (res.data.status == 200) {
 								var grid = res.data.data;
-								var itemsList = grid.rows;
+								var itemsList = grid.content;
 								this.itemsList = itemsList;
 
-								var maxPage = grid.total;		// 获得总页数
-								var total = grid.records;		// 获得总记录数
+								var maxPage = grid.totalPages;		// 获得总页数
+								var total = grid.totalElements;		// 获得总记录数
 								
 								this.maxPage = maxPage;
 								this.total = total;

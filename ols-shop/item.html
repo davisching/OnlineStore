@@ -354,7 +354,7 @@
 				</div>
 				<div class="footer-bd ">
 					<p>
-						<em>© 2019 imooc.com 京ICP备12003892号-11 北京奥鹏文化传媒有限公司 版权所有</em>
+						<em>© 2020 Davis Ching 網站開發個人練習</em>
 					</p>
 				</div>
 			</div>
@@ -513,8 +513,8 @@
 							"&pageSize=" + pageSize, {})
 						.then(res => {
 							if (res.data.status == 200) {
-								var grid = res.data.data;
-								var commentList = grid.rows;
+								
+								var commentList = res.data.data.content;
 								this.commentList = commentList;
 								// console.log(commentList);
 
@@ -525,8 +525,8 @@
 									commentList[i].createdTime = formatedTime;
 								}
 
-								var maxPage = grid.total; // 获得总页数
-								var total = grid.records; // 获得总记录数
+								var maxPage = res.data.data.totalPages; // 获得总页数
+								var total = res.data.data.totalElements; // 获得总记录数
 
 								this.maxPage = maxPage;
 								this.total = total;

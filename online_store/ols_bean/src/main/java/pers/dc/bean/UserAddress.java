@@ -15,17 +15,11 @@ public class UserAddress {
   @Id
   private String id;
   private String userId;
-  @NotBlank
   private String receiver;
-  @NotBlank
   private String mobile;
-  @NotBlank
   private String province;
-  @NotBlank
   private String city;
-  @NotBlank
   private String district;
-  @NotBlank
   private String detail;
   private String extand;
   private long isDefault;

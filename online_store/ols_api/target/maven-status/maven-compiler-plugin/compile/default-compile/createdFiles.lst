@@ -1,9 +1,11 @@
 pers/dc/controller/center/CenterController.class
 pers/dc/controller/IndexController.class
+pers/dc/auto/AutoDelivery.class
 pers/dc/App.class
 pers/dc/exception/CustomExceptionHandler.class
 pers/dc/controller/OrderController.class
 pers/dc/controller/ItemController.class
+pers/dc/WarStarterApp.class
 pers/dc/aspect/ServiceLogAspect.class
 pers/dc/controller/center/MyCommentsController.class
 pers/dc/controller/center/MyOrdersController.class

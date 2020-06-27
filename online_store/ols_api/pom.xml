@@ -11,6 +11,8 @@
 
     <artifactId>ols_api</artifactId>
 
+    <packaging>war</packaging>
+
     <dependencies>
         <dependency>
             <groupId>pers.dc</groupId>

@@ -1,6 +1,5 @@
 package pers.dc.bean.vo;
 
-import org.apache.catalina.User;
 import pers.dc.bean.Users;
 
 public class UserVO {

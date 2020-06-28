@@ -61,7 +61,7 @@ public class CenterUserServiceImpl implements CenterUserService {
             e.printStackTrace();
         }
         Users user = userDao.getOne(userId);
-        user.setFace("http://localhost:8088/" + file);
+        user.setFace("http://35.193.194.133:8088/ols/" + file);
         user.setUpdatedTime(new Date());
         return userDao.save(user);
     }
